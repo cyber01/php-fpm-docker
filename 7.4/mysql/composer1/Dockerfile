@@ -7,7 +7,6 @@ RUN apt-get update \
         g++ \
         wget \
         zip \
-        mysql-client \
         unzip \
         libmcrypt-dev \
         libicu-dev \
