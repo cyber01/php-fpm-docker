@@ -46,5 +46,4 @@ ENV COMPOSER_HOME /tmp
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
     && php composer-setup.php --version=$COMPOSER_VERSION --install-dir=/usr/local/bin --filename=composer \
     && php -r "unlink('composer-setup.php');" \
-    && composer --ansi --version --no-interaction \
-    && chown -R www-data:www-data /tmp/cache
+    && composer --ansi --version --no-interaction

@@ -1,5 +1,5 @@
 FROM php:7.4-fpm
-LABEL maintainer="cyber01"
+LABEL maintainer="help@cyber01.ru"
 
 # Install libs
 RUN apt-get update \
@@ -45,5 +45,4 @@ ENV COMPOSER_HOME /tmp
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
     && php composer-setup.php --version=$COMPOSER_VERSION --install-dir=/usr/local/bin --filename=composer \
     && php -r "unlink('composer-setup.php');" \
-    && composer --ansi --version --no-interaction \
-    && chown -R www-data:www-data /tmp/cache
+    && composer --ansi --version --no-interaction
